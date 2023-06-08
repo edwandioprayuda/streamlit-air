@@ -1,11 +1,6 @@
-streamlit-option-menu
+numpy==1.23.4
 pandas==1.5.3
-numpy==1.23.5
 streamlit
+pickle
 scikit-learn
-seaborn
-flask
-gunicorn
-Pillow
-pip
-fastapi
+pip==23.0.1
