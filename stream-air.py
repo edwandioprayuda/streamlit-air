@@ -37,20 +37,22 @@ if st.button('Prediksi Wisata Air'):
             prediction = air_model.predict(std_data)
 
             if prediction[0] == 0:
-                wisata_air_prediction = 'Anda boleh berenang'
+                wisata_air_prediction = "Green (Anda boleh berenang)"
                 prediction_color = 'green'  # Warna latar belakang untuk prediksi Green
-            else:
             elif prediction[0] == 1:
-                wisata_air_prediction = 'Anda tidak boleh berenang'
+                wisata_air_prediction = "Red (Anda tidak boleh berenang)"
                 prediction_color = 'red'  # Warna latar belakang untuk prediksi Red
             else:
-            else:
-                wisata_air_prediction = 'Berhati-hati'
-                prediction_color = 'yellow'  # Warna latar belakang untuk prediksi Yellow
-            else:
+                wisata_air_prediction = "Amber (Berhati-hati)"
+                prediction_color = 'yellow'  # Warna latar belakang untuk prediksi Amber
+
+            # Menampilkan output dengan warna latar belakang sesuai prediksi
+            st.markdown(f'<span style="background-color:{prediction_color}">{wisata_air_prediction}</span>', unsafe_allow_html=True)
         except ValueError:
             wisata_air_prediction = 'Input tidak valid, harap masukkan angka'
+            st.error(wisata_air_prediction)
     else:
         wisata_air_prediction = 'Harap lengkapi semua input'
-
+        st.error(wisata_air_prediction)
+        
 st.success(wisata_air_prediction)
