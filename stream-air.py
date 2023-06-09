@@ -37,13 +37,13 @@ if st.button('Prediksi Wisata Air'):
             prediction = air_model.predict(std_data)
 
             if prediction[0] == 0:
-                wisata_air_prediction = "Green (Anda boleh berenang)"
+                wisata_air_prediction = "Anda boleh berenang"
                 prediction_color = 'green'  # Warna latar belakang untuk prediksi Green
             elif prediction[0] == 1:
-                wisata_air_prediction = "Red (Anda tidak boleh berenang)"
+                wisata_air_prediction = "Anda tidak boleh berenang"
                 prediction_color = 'red'  # Warna latar belakang untuk prediksi Red
             else:
-                wisata_air_prediction = "Amber (Berhati-hati)"
+                wisata_air_prediction = "Berhati-hati"
                 prediction_color = 'yellow'  # Warna latar belakang untuk prediksi Amber
 
             # Menampilkan output dengan warna latar belakang sesuai prediksi
