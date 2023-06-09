@@ -8,7 +8,7 @@ air_model = pickle.load(open('air_model.sav', 'rb'))
 scaler = pickle.load(open('scaler.sav', 'rb'))
 
 # Judul
-st.title('Prediksi Wisata Air')
+st.title('Prediksi Keamanan Wisata Air')
 
 Latitude = st.text_input('Input Nilai Latitude')
 Longitude = st.text_input('Input Nilai Longitude')
