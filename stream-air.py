@@ -38,10 +38,16 @@ if st.button('Prediksi Wisata Air'):
 
             if prediction[0] == 0:
                 wisata_air_prediction = 'Anda boleh berenang'
+                prediction_color = 'green'  # Warna latar belakang untuk prediksi Green
+            else:
             elif prediction[0] == 1:
                 wisata_air_prediction = 'Anda tidak boleh berenang'
+                prediction_color = 'red'  # Warna latar belakang untuk prediksi Red
+            else:
             else:
                 wisata_air_prediction = 'Berhati-hati'
+                prediction_color = 'yellow'  # Warna latar belakang untuk prediksi Yellow
+            else:
         except ValueError:
             wisata_air_prediction = 'Input tidak valid, harap masukkan angka'
     else:
