@@ -54,5 +54,3 @@ if st.button('Prediksi Wisata Air'):
     else:
         wisata_air_prediction = 'Harap lengkapi semua input'
         st.error(wisata_air_prediction)
-        
-st.success(wisata_air_prediction)
